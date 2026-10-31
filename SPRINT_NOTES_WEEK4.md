@@ -37,8 +37,6 @@
 ## Open items
 
 - All 180 stock positions carry the Week 3 `scale_mismatch_flag`. Stock-based results need confirming against a physical count.
-- The earlier Power BI dashboard was dropped. Any dashboard for this phase will be rebuilt from the outputs in this folder.
-
 ## Next steps
 
 Week 5: Stock Health Assessment, Overstock & Understock Detection and Inventory Aging Analysis, building on the turnover results here.
