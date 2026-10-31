@@ -28,7 +28,7 @@ week-04/
     └── charts/ (6 PNG charts)
 ```
 
-To re-run the notebook, point `DATA_DIR` at a folder holding `sales_transactions.csv` and `inventory_position.csv` (both in the Week 2 folder).
+To re-run the notebook, open it in Google Colab and run all cells. The first cell mounts Google Drive, and the notebook then reads `sales_transactions.csv` and `inventory_position.csv` from the project's `week-02/week-02/` folder in Drive and writes its outputs to `week-04/outputs/`.
 
 ## Ground rules
 
@@ -72,5 +72,6 @@ Network units are flat-to-slightly-down (207,925 in 2019, 199,858 in 2024). One 
 ## Caveats
 
 - All 180 stock positions carry the `scale_mismatch_flag` raised in Week 3 (`current_stock` is far above `max_stock`). Turnover and years of supply are therefore **as recorded** and need confirming against a physical count before anyone acts on them.
+- **Reconciliation (31 Oct 2026).** The scale flag was traced through the purchasing and ledger data and is not a unit error. Received purchase orders (22.4 million units) and ledger receipts (20.4 million units) agree to within about 9%, and recorded stock is consistent with both, so the mismatch sits between purchasing and stock on one side and the sales and policy fields (max stock, reorder level) on the other. Stock-based figures stay as recorded.
 - Velocity classes depend on the chosen basis (order lines here). Units sold gives a different split for 8 of 30 products.
 - Revenue here is ex-GST. `product_features.csv` (Week 3) holds GST-inclusive revenue, which is about 27% higher.
